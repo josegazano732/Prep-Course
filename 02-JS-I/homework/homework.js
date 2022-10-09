@@ -131,7 +131,7 @@ function elevarAlCuadrado(num) {
   // ojo: No es raiz cuadrada!
   // Tu código:
   //resultado = num ** 2;
-  resultado = Math.pow(num,2);
+  resultado = Math.pow(num,2);// el parametro num y el valor 2 cuantas veces multiplicar.
   return resultado;
   
 }
@@ -139,31 +139,42 @@ function elevarAlCuadrado(num) {
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  
+  //resultado = Math.pow(num,3);
+  resultado = num ** 3;
+  return resultado;
 }
 
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
+  resultado = Math.pow(num,exponent);
+  return resultado;
   
 }
 
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
+  resultado = Math.round(num);
+  return resultado;
   
 }
 
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
+  resultado = Math.ceil(num);
+  return resultado;
   
 }
 
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  
+  //random(), con este método podemos generar números aleatorios, en principio seria entre 0 y 1.
+  //Math.random()*30, esto genera números entre 0 y 30,
+  resultado = Math.random();
+  return resultado;
 }
 
 function esPositivo(numero) {
@@ -171,6 +182,15 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
+  if (numero == 0) {
+    return false;
+  }
+  if (numero >= 1) {
+    return "Es positivo";
+  }
+  if (numero < 0) {
+    return "Es negativo";
+  }
   
 }
 
@@ -178,12 +198,17 @@ function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
+  let nuevaString = str + "!";
+  return nuevaString
+
 }
 
 function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
+  let resultadoString = nombre + ' ' + apellido;
+  return resultadoString;
   
 }
 
@@ -191,12 +216,16 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
+  let resultadoSaludo = `Hola ${nombre}!`;
+  return resultadoSaludo;
   
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
+  let resultadoRect = alto * ancho;
+  return resultadoRect;
   
 }
 
@@ -204,6 +233,9 @@ function obtenerAreaRectangulo(alto, ancho) {
 function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
+  let cantLados = 4;
+  let resultado = cantLados * lado;
+  return resultado;
   
 }
 
@@ -211,6 +243,9 @@ function retornarPerimetro(lado){
 function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
+  //let baseAltura = base * altura;
+  let resultTriang = (base * altura) / 2;
+  return resultTriang;
 
 }
 
@@ -219,6 +254,8 @@ function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
+  let dolar = 1.2;
+  return euro * dolar;
   
 }
 
@@ -229,7 +266,13 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  
+  if(letra.length > 1 ){
+    return "Dato incorrecto";
+  }
+  if(letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u'){
+    return "Es vocal";
+  }
+  return "Dato incorrecto";
 }
 
 
