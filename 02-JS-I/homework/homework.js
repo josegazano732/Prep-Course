@@ -104,13 +104,16 @@ function mayorQueCincuenta(num) {
 function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y"
   // Tu código:
-  
+  resultado = x % y;
+  return resultado;
 }
 
 function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
+  resultado = num % 2 == 0;
+  return resultado;
   
 }
 
@@ -118,6 +121,8 @@ function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
+  resultado = num % 2 !== 0;
+  return resultado;
   
 }
 
@@ -125,6 +130,9 @@ function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
+  //resultado = num ** 2;
+  resultado = Math.pow(num,2);
+  return resultado;
   
 }
 
